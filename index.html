@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body class="showCart">
+  <div class="container">
+    <header>
+      <div class="title">PRODUCT LIST</div>
+      <i class="ri-shopping-cart-2-line icon-cart"><span id="cart-count">0</span></i>
+    </header>
+
+    <div class="listProduct">
+      <div class="item">
+        <img src="image/baby11.jpg" alt="">
+        <h3>NAME PRODUCT</h3>
+        <div class="price">$200</div>
+        <button class="addCart">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cartTab">
+    <h2>Shopping Cart</h2>
+    <div class="listCart">
+      <div class="item">
+        <div class="image">
+          <img src="image/baby12.jpg" alt="">
+        </div>
+        <div class="name">NAME</div>
+        <div class="totalPrice">$100</div>
+        <div class="quantity">
+          <span class="minus"><</span>
+          <span>1</span>
+          <span class="plus">></span>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">CHECKOUT</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
