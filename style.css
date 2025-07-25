@@ -19,7 +19,8 @@ header {
   margin: auto;
   text-align: center;
   padding-top: 10px;
-  transition: trnsform 0.5s;
+  transition: transform 0.5s;
+  /* position: relative; */
 }
 .icon-cart {
   font-size: 22px;
@@ -80,19 +81,26 @@ header i span {
   width: 350px;
   background-color: lavender;
   position: fixed;
-  inset: 0 -400px 0 auto;
+  /* inset: 0 -100% 0 auto; */
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  /* right: 0; */
   box-shadow: 0 0 10px gray;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   gap: 20px;
   transition: 0.5s;
 }
-body.showCart .cartTab {
+.cartTab.active {
+  right: 0;
+}
+/* body.showCart .cartTab {
     inset: 0 0 0 auto;
-}
-body.showCart .container {
+} */
+/* body.showCart .container {
   transform: translateX(-250px);
-}
+} */
 .cartTab h2 {
   padding: 20px;
   margin: 0;
