@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const iconCart = document.getElementById("icon-cart");
   const closeCart = document.getElementById("close");
   const cartTab = document.querySelector(".cartTab");
-  const listProductHTML = document.getElementById("listProduct");
+  const listProductHTML = document.querySelector(".listProduct");
+
+  let listProducts = [];
 
   iconCart.addEventListener('click', () => {
     cartTab.classList.add("active");
@@ -28,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
+
+  listProductHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if (positionClick.classList.contains('addCart')) {
+      alert('1');
+    }
+  })
 
   const initApp = () => {
     fetch('products.json')
