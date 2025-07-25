@@ -12,15 +12,16 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+  max-width: 900px;
+  margin: auto;
 }
 .container {
-  width: 900px;
-  max-width: 90vw;
-  margin: auto;
+  max-width: 900px;
+  /* max-width: 90vw; */
+  margin: 25px auto;
   text-align: center;
   padding-top: 10px;
   transition: transform 0.5s;
-  /* position: relative; */
 }
 .icon-cart {
   font-size: 22px;
@@ -49,7 +50,8 @@ header i span {
 }
 .listProduct {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
   gap: 20px;
 }
 .listProduct .item {
@@ -59,7 +61,9 @@ header i span {
   box-shadow: 0 0 10px gray;
 }
 .listProduct .item h3 {
+  font-size: 17px;
   font-weight: 400;
+  margin: 0;
 }
 .listProduct .item .price {
   letter-spacing: 3px;
@@ -89,7 +93,7 @@ header i span {
   box-shadow: 0 0 10px gray;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-  gap: 20px;
+  gap: 30px;
   transition: 0.5s;
 }
 .cartTab.active {
@@ -121,7 +125,7 @@ header i span {
   padding: 5px 0;
 }
 .cartTab .btn .checkOut {
-  background-color: rgb(88, 132, 132);
+  background-color: rgb(144, 134, 134);
 }
 .cartTab .btn .close:hover {
   background-color: red;
@@ -157,6 +161,17 @@ header i span {
 }
 .listCart {
   overflow: auto;
+}
+
+@media (350px <= width <=968px) {
+  header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .listProduct {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
 
