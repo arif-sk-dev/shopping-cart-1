@@ -4,9 +4,7 @@ body {
   font-family: 'poppins', sans-serif;
   margin: 0;
 }
-/* * {
-  border: .001px solid red;
-} */
+
 header {
   display: flex;
   align-items: center;
@@ -99,12 +97,7 @@ header i span {
 .cartTab.active {
   right: 0;
 }
-/* body.showCart .cartTab {
-    inset: 0 0 0 auto;
-} */
-/* body.showCart .container {
-  transform: translateX(-250px);
-} */
+
 .cartTab h2 {
   padding: 20px;
   margin: 0;
