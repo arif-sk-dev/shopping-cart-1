@@ -80,6 +80,20 @@ header i span {
   background-color: black;
 }
 
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 .cartTab {
   width: 350px;
   background-color: lavender;
@@ -94,6 +108,7 @@ header i span {
   grid-template-rows: 50px 1fr 50px;
   /* gap: 30px; */
   transition: 0.5s;
+  z-index: 1001;
 }
 .cartTab.active {
   right: 0;

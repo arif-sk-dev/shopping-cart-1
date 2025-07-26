@@ -132,17 +132,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const listProductHTML = document.querySelector(".listProduct");
   const listCartHTML = document.querySelector(".listCart");
   const iconCartSpan = document.querySelector(".icon-cart span");
+  const overlay = document.querySelector("#overlay");
 
   let listProducts = [];
   let carts = [];
 
   iconCart.addEventListener("click", () => {
     cartTab.classList.add("active");
+    overlay.classList.add("active");
   });
 
   closeCart.addEventListener("click", () => {
     cartTab.classList.remove("active");
+    overlay.classList.remove("active");
   });
+
+  overlay.addEventListener('click', () => {
+    cartTab.classList.remove("active");
+    overlay.classList.remove("active");
+  })
 
   const addDataToHTML = (products) => {
     listProductHTML.innerHTML = "";
