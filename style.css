@@ -137,12 +137,22 @@ header i span {
 }
 .cartTab .listCart .item {
   display: grid;
-  grid-template-columns: 55px 110px 50px 1fr;
-  /* gap: 2px; */
+  grid-template-columns: 55px 1fr 55px 38px 20px;
+  gap: 3px;
   text-align: center;
   align-items: center;
   padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
 }
+.cartTab i {
+  cursor: pointer;
+  color: gray;
+}
+.cartTab i:hover {
+  color: red;
+}
+
 .listCart .quantity span {
   display: inline-block;
   width: 25px;
