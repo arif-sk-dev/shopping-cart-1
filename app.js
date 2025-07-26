@@ -168,12 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
     addCartToHTML();
+    addCartToMemory();
   };
+  const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(carts));
+  }
 
   const addCartToHTML = () => {
     listCartHTML.innerHTML = "";
     let totalQuantity = 0;
     carts.forEach((cart) => {
+      totalQuantity = totalQuantity + cart.quantity;
       const product = listProducts.find((p) => p.id == cart.product_id);
       if (!product) return;
 
@@ -194,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       listCartHTML.appendChild(newCart);
     });
+    iconCartSpan.innerText = totalQuantity;
   };
 
   const initApp = () => {
@@ -209,6 +215,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => {
         console.error("Failed to load products:", err);
       });
+      // get cart from memory
+      if(localStorage.getItem('cart')) {
+        carts = JSON(localStorage.getItem('cart'));
+        addCartToHTML();
+      }
   };
 
   initApp();
