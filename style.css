@@ -26,6 +26,7 @@ header {
 }
 header i {
   position: relative;
+  cursor: pointer;
 }
 header i span {
   font-size: 13px;
@@ -91,7 +92,7 @@ header i span {
   box-shadow: 0 0 10px gray;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-  gap: 30px;
+  /* gap: 30px; */
   transition: 0.5s;
 }
 .cartTab.active {
@@ -99,7 +100,8 @@ header i span {
 }
 
 .cartTab h2 {
-  padding: 20px;
+  padding: 10px;
+  /* padding: 20px; */
   margin: 0;
   /* margin-bottom: 10px; */
   font-weight: 300;
@@ -107,6 +109,7 @@ header i span {
 .cartTab .btn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 0;
 }
 .cartTab .btn button {
   background-color: #75766d;
@@ -129,11 +132,13 @@ header i span {
 
 .cartTab .listCart .item img {
   width: 100%;
+  display: block;
+  padding: 2px;
 }
 .cartTab .listCart .item {
   display: grid;
-  grid-template-columns: 50px 110px 50px 1fr;
-  gap: 10px;
+  grid-template-columns: 55px 110px 50px 1fr;
+  /* gap: 2px; */
   text-align: center;
   align-items: center;
   padding-left: 5px;
