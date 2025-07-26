@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const addCartToHTML = () => {
     listCartHTML.innerHTML = "";
+    let totalQuantity = 0;
     carts.forEach((cart) => {
       const product = listProducts.find((p) => p.id == cart.product_id);
       if (!product) return;
@@ -184,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${product.image}" alt="${product.name}">
         </div>
         <div class="name">${product.name}</div>
-        <div class="price">$${product.price}</div>
+        <div class="price">$${product.price * cart.quantity}</div>
         <div class="quantity">
           <span class="minus"><</span>
           <span>${cart.quantity}</span>
