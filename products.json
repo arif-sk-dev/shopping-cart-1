@@ -3,61 +3,145 @@
     "id": 1,
     "name": "LD01 Lounge Dress",
     "price": 100,
-    "image": "image/baby11.jpg"
+    "image": [
+      "image/baby11.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 2,
     "name": "LD02 Lounge Dress",
     "price": 110,
-    "image": "image/baby12.jpg"
+    "image": [
+      "image/baby12.jpg",
+      "image/baby20.jpg",
+      "image/baby17.jpg",
+      "image/baby18.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 3,
     "name": "LD03 Lounge Dress",
     "price": 130,
-    "image": "image/baby13.jpg"
+    "image": [
+      "image/baby13.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 4,
     "name": "LD04 Lounge Dress",
     "price": 140,
-    "image": "image/baby14.jpg"
+    "image": [
+      "image/baby14.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 5,
     "name": "LD05 Lounge Dress",
     "price": 150,
-    "image": "image/baby16.jpg"
+    "image": [
+      "image/baby17.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 6,
     "name": "LD06 Lounge Dress",
     "price": 160,
-    "image": "image/baby17.jpg"
+    "image": [
+      "image/baby16.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 7,
     "name": "LD07 Lounge Dress",
     "price": 170,
-    "image": "image/baby18.jpg"
+    "image": [
+      "image/baby18.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 8,
     "name": "LD08 Lounge Dress",
     "price": 180,
-    "image": "image/baby19.jpg"
+    "image": [
+      "image/baby19.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 9,
     "name": "LD09 Lounge Dress",
     "price": 190,
-    "image": "image/baby20.jpg"
+    "image": [
+      "image/baby20.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   },
   {
     "id": 10,
     "name": "LD10 Lounge Dress",
     "price": 200,
-    "image": "image/baby21.jpg"
+    "image": [
+      "image/baby21.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
+  },
+  {
+    "id": 10,
+    "name": "LD10 Lounge Dress",
+    "price": 200,
+    "image": [
+      "image/baby21.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
+  },
+  {
+    "id": 10,
+    "name": "LD10 Lounge Dress",
+    "price": 200,
+    "image": [
+      "image/baby21.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   }
 ]
 

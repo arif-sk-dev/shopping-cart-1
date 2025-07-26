@@ -32,10 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
       newProduct.classList.add("item");
       newProduct.dataset.id = product.id;
 
+      const firstImage = Array.isArray(product.image) ? product.image[0] : product.image; //render first img
+
       newProduct.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+      <a href="detail.html?id=${product.id}" style= "text-decoration: none; color: black;">
+        <img src="${firstImage}" alt="${product.name}">
         <h3>${product.name}</h3>
         <div class="price">$${product.price}</div>
+      </a>
         <button class="addCart">Add To Cart</button>
       `;
       listProductHTML.appendChild(newProduct);
@@ -85,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const newCart = document.createElement("div");
       newCart.classList.add("item");
-
+      const firstImage = Array.isArray(product.image) ? product.image[0] : product.image;
       newCart.innerHTML = `
         <div class="image">
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${firstImage}" alt="${product.name}">
         </div>
         <div class="name" style="font-size:14px">${product.name}</div>
         <div class="price">$${product.price * cart.quantity}</div>
