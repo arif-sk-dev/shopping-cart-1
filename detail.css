@@ -102,7 +102,7 @@ body {
 
 .additional-info>ul>li>a {
   text-decoration: none;
-  padding: 15px 15px 15px 9px;
+  padding: 15px 0;
   color: #656e81;
   font-size: 13px;
   display: block;
@@ -112,15 +112,15 @@ body {
   text-overflow: ellipsis;
 }
 .additional-info>ul>li>a>i {
-   padding-right: 10px;
+   padding-right: 5px;
 }
 .additional-info>ul>li>a:hover {
   color: #93705c;
-  padding-left: 15px;
+  padding-left: 5px;
   transition: 0.3s ease-in-out;
 }
 
-/* popup / sizeguide button  */
+/* popup / size guide button  */
 .size-guide-btn {
   background-color: rgb(8, 165, 8);
   color: white;
