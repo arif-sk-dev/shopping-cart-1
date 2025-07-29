@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Header</title>
+</head>
+<body>
+  <header>
+    <div class="title" style="font-size: 22px; font-weight: bold;">LOGO</div>
+    <i class="ri-shopping-cart-2-line icon-cart" id="icon-cart"><span id="cart-count">0</span></i>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="cartTab" id="cartTab">
+    <h2>Shopping Cart</h2>
+    <div class="listCart"></div>
+    <div class="btn">
+      <button class="close" id="close">CLOSE</button>
+      <button class="checkOut">CHECKOUT</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>

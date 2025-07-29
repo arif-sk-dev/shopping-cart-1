@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="detail.css">
 </head>
 <body>
+  <div id="header-placeholder"></div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        })
+        .then(() => {
+          const script = document.createElement("script");
+          script.src = "cart.js";
+          document.body.appendChild(script);
+        });
+    });
+  </script>
+
+
   <section id="prodetails" class="product-detail-container">
     <div class="img-section">
       <img id="main-img" class="productImg" src="image/baby20.jpg" alt="main image">

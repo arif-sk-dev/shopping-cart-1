@@ -7,43 +7,52 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body class="showCart">
-  <header>
-    <div class="title">PRODUCT LIST</div>
-    <i class="ri-shopping-cart-2-line icon-cart" id="icon-cart"><span id="cart-count">0</span></i>
-  </header>
+<body>
+  <div id="header-placeholder"></div>
+  
   <div class="container">
-
     <div class="listProduct">  <!-- Product list --> 
-      <div class="item">
-        <!-- <img src="image/baby11.jpg" alt="">
-        <h3>NAME PRODUCT</h3>
-        <div class="price">$200</div>
-        <button class="addCart">Add To Cart</button> -->
-      </div>
+      <div class="item"></div>
     </div>
   </div>
 
-  <div class="overlay" id="overlay"></div>
-  <div class="cartTab">
-    <h2>Shopping Cart</h2>
-    <div class="listCart">
-      <!-- <div class="item">
-        <div class="image">
-          <img src="image/baby12.jpg" alt="">
-        </div>
-        <div class="name">NAME</div>
-        <div class="totalPrice">$100</div>
-        <input type="number" value="1" min="1" class="quantity">
-        <i class="ri-delete-bin-6-fill cart-remove"></i>
-      </div> -->
-    </div>
-    <div class="btn">
-      <button class="close" id="close">CLOSE</button>
-      <button class="checkOut">CHECKOUT</button>
-    </div>
-  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        })
+        .then(() => {
+          const script = document.createElement("script");
+          script.src = "cart.js";
+          document.body.appendChild(script);
+        });
+    });
+  </script>
 
-  <script src="app.js"></script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        })
+        .then(() => {
+          const script = document.createElement("script");
+          script.src = "cart.js";
+          document.body.appendChild(script);
+  
+          // Optional: load icon library if not already included in main file
+          const iconLib = document.createElement("script");
+          iconLib.src = "https://unpkg.com/remixicon/fonts/remixicon.js";
+          document.head.appendChild(iconLib);
+        });
+    });
+  </script> -->
+
+  <!-- <script src="app.js"></script> -->
+   <!-- <script src="cart.js"></script> -->
+   <script src="product.js"></script>
 </body>
 </html>

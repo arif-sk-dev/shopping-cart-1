@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  /* max-width: 90vw; */
+  margin: 25px auto;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform 0.5s;
+}
+
+.listProduct .item img {
+  width: 100%;
+  /* filter: drop-shadow(0 50px 20px black); */
+}
+.listProduct {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
+  gap: 20px;
+}
+.listProduct .item {
+  background-color: #eeeee6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px gray;
+}
+.listProduct .item h3 {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}
+.listProduct .item .price {
+  letter-spacing: 3px;
+  font-size: small;
+}
+.listProduct .item button {
+  background-color: #75766d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 5px;
+  cursor: pointer;
+}
+.listProduct .item button:hover {
+  background-color: black;
+}
+
+
+@media (350px <= width <=968px) {
+  header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .listProduct {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
