@@ -1,101 +1,4 @@
-// // cart.js
-// document.addEventListener("DOMContentLoaded", () => {
-//   const iconCart = document.getElementById("icon-cart");
-//   const closeCart = document.getElementById("close");
-//   const cartTab = document.querySelector(".cartTab");
-//   const listCartHTML = document.querySelector(".listCart");
-//   const iconCartSpan = document.querySelector(".icon-cart span");
-//   const overlay = document.querySelector("#overlay");
-
-//   let listProducts = [];
-//   let carts = [];
-
-//   iconCart?.addEventListener("click", () => {
-//     cartTab.classList.add("active");
-//     overlay.classList.add("active");
-//   });
-
-//   closeCart?.addEventListener("click", () => {
-//     cartTab.classList.remove("active");
-//     overlay.classList.remove("active");
-//   });
-
-//   overlay?.addEventListener("click", () => {
-//     cartTab.classList.remove("active");
-//     overlay.classList.remove("active");
-//   });
-
-//   const addCartToMemory = () => {
-//     localStorage.setItem("cart", JSON.stringify(carts));
-//   };
-
-//   const addCartToHTML = () => {
-//     listCartHTML.innerHTML = "";
-//     let totalUniqueProducts = 0;
-
-//     carts.forEach((cart, index) => {
-//       totalUniqueProducts++;
-
-//       const product = listProducts.find(p => p.id == cart.product_id);
-//       if (!product) return;
-
-//       const firstImage = Array.isArray(product.image) ? product.image[0] : product.image;
-//       const newCart = document.createElement("div");
-//       newCart.classList.add("item");
-
-//       newCart.innerHTML = `
-//         <div class="image"><img src="${firstImage}" alt="${product.name}"></div>
-//         <div class="name" style="font-size:14px">${product.name}</div>
-//         <div class="price">$${product.price * cart.quantity}</div>
-//         <input type="number" value="${cart.quantity}" min="1" class="quantity" data-index="${index}">
-//         <i class="ri-delete-bin-6-fill cart-remove" data-index="${index}" style="cursor:pointer;"></i>
-//       `;
-//       listCartHTML.appendChild(newCart);
-//     });
-
-//     iconCartSpan.innerText = totalUniqueProducts;
-
-//     // Quantity change
-//     listCartHTML.querySelectorAll('.quantity').forEach(input => {
-//       input.addEventListener('change', event => {
-//         let newQuantity = parseInt(event.target.value);
-//         const index = parseInt(event.target.dataset.index);
-//         if (isNaN(newQuantity) || newQuantity < 1) newQuantity = 1;
-//         carts[index].quantity = newQuantity;
-//         addCartToMemory();
-//         addCartToHTML();
-//       });
-//     });
-
-//     // Delete item
-//     listCartHTML.querySelectorAll('.cart-remove').forEach(button => {
-//       button.addEventListener('click', event => {
-//         const index = parseInt(event.target.dataset.index);
-//         carts.splice(index, 1);
-//         addCartToMemory();
-//         addCartToHTML();
-//       });
-//     });
-//   };
-
-//   const initCart = () => {
-//     fetch("products.json")
-//       .then(res => res.json())
-//       .then(data => {
-//         listProducts = data;
-//         const savedCart = localStorage.getItem("cart");
-//         if (savedCart) {
-//           carts = JSON.parse(savedCart);
-//           addCartToHTML();
-//         }
-//       })
-//       .catch(err => console.error("Cart failed to load products:", err));
-//   };
-
-//   initCart();
-// });
-
-//======================
+// cart.js
 let listProducts = [];
 let carts = [];
 
@@ -128,6 +31,8 @@ const addToCart = (product_id) => {
   const existing = carts.find(cart => cart.product_id == product_id);
   if (existing) {
     existing.quantity++;
+    alert("This product is already added in your cart!");
+    return;
   } else {
     carts.push({ product_id, quantity: 1 });
   }
