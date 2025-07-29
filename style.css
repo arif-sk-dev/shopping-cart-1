@@ -13,6 +13,14 @@ header {
   max-width: 900px;
   margin: auto;
 }
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+a:hover {
+  color: gray;
+}
 .container {
   max-width: 900px;
   /* max-width: 90vw; */
