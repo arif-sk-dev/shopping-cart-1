@@ -46,6 +46,9 @@ body {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+.thumbnails>img:hover {
+  opacity: 0.65;
+}
 
 .info {
   line-height: 35px;
@@ -138,76 +141,6 @@ body {
 
 /* popup / size guide button  */
 .size-guide-btn {
-  background-color: rgb(8, 165, 8);
-  color: white;
-  padding: 0.45rem 1.2rem;
-  border: none;
-  cursor: pointer;
-  font: 1rem;
-  border-radius: 4px;
-  transition: 0.3s ease-in-out;
-}
-.size-guide-btn:hover {
-  background-color: green;
-}
-
- .popup-overlay {  /* dark outside the popup area  */
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1002;
-}
-.popup-overlay.active {   /* dark outside the cart popup  */
-  opacity: 1;
-  visibility: visible;  
-}
-.popup-content {
-  display: none;
-  position: relative;
-  background-color: white;
-  padding: 1.8rem;
-  max-width: 85%;
-  margin: auto;
-  /* max-width: 450px; */
-  border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.3s ease-in-out;
-  z-index: 1002;
-}
-.popup-content.active {
-  display: block;
-}
-.popup-content h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-.popup-content ul {
-  margin: 0.5rem 0;
-  padding-left: 1rem;
-  list-style-type: disc;
-  line-height: 16px;
-  font-size: 13px;
-}
-.popup-content p {
-  font-size: 13px;
-  line-height: 16px;
-}
-
-#closeSizeGuide {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.4); }
-  to { opacity: 1; transform: scale(1); }
-}
-/* popup / size guide button  */
-/* .size-guide-btn {
   background-color: #76776b;
   color: white;
   padding: 0.45rem 1.2rem;
@@ -221,7 +154,7 @@ body {
   background-color: #686867;
 }
 
- .popup-overlay {
+ .popup-overlay {  /* dark outside the popup area  */
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -275,7 +208,7 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.4); }
   to { opacity: 1; transform: scale(1); }
-} */
+}
  /* product details end here =========== */
 
  @media (350px <= width <=768px) {
