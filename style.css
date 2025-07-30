@@ -80,12 +80,12 @@ header i span {
   background-color: #75766d;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 5px;
   cursor: pointer;
 }
 .listProduct .item button:hover {
-  background-color: black;
+  background-color: #686867;
 }
 
 

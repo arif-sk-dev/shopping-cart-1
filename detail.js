@@ -1,9 +1,14 @@
-// //Popup section start here 
+// Detail.js
+//Popup section start here 
 document.addEventListener("DOMContentLoaded", () => {
   const openPopup = document.getElementById("openSizeGuide");
   const popup = document.querySelector(".popup-content");
   const closePopup = document.getElementById("closeSizeGuide");
   const overlay = document.querySelector("#popupOverlay");
+
+  // const productId = getProductIdFromURL();
+  // const addToCartBtn = document.getElementById("addToCartBtn");
+  // const quantityInput = document.querySelector("input[type='number']");
 
   openPopup.addEventListener('click', () => {
     popup.classList.add("active");
@@ -55,4 +60,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-}); 
+});
+
+
+// detail product add to cart with dynamic function which is updated all page's header
+document.addEventListener("DOMContentLoaded", () => {
+  const productId = getProductIdFromURL();
+
+  const addToCartBtn = document.getElementById("addToCartBtn");
+  const quantityInput = document.querySelector("input[type='number']");
+
+  addToCartBtn.addEventListener("click", () => {
+    const qty = parseInt(quantityInput.value);
+    if (isNaN(qty) || qty < 1) return;
+
+    // check if product exists in listProducts
+    const product = listProducts.find(p => p.id == productId);
+    if (!product) return;
+
+    const existing = carts.find(cart => cart.product_id == productId);
+    if (existing) {
+      alert("This product is already added in your cart!");
+    } else {
+      carts.push({ product_id: productId, quantity: qty });
+      localStorage.setItem("cart", JSON.stringify(carts));
+      addCartToHTML();
+    }
+  });
+});

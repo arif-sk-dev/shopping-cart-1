@@ -74,6 +74,22 @@ body {
   padding-right: 50px;
 }
 
+.add-cart {
+  background-color: #76776b;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  border: 0.01px gray;
+  transition: 0.3s ease-in-out;
+}
+.add-cart:hover {
+  background-color: #686867;
+}
+
 #product-desc {
   line-height: 17px;
   padding: 5px 5px 5px 0;
@@ -122,7 +138,7 @@ body {
 
 /* popup / size guide button  */
 .size-guide-btn {
-  background-color: rgb(8, 165, 8);
+  background-color: #76776b;
   color: white;
   padding: 0.45rem 1.2rem;
   border: none;
@@ -132,7 +148,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 .size-guide-btn:hover {
-  background-color: green;
+  background-color: #686867;
 }
 
  .popup-overlay {  /* dark outside the popup area  */

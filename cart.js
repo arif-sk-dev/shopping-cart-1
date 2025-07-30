@@ -1,4 +1,4 @@
-// cart.js   [global dynamic cart]
+// cart.js   [global dynamic cart function]
 let listProducts = [];
 let carts = [];
 

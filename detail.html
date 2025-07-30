@@ -9,22 +9,6 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("header.html")
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById("header-placeholder").innerHTML = html;
-        })
-        .then(() => {
-          const script = document.createElement("script");
-          script.src = "cart.js";
-          document.body.appendChild(script);
-        });
-    });
-  </script>
-
 
   <section id="prodetails" class="product-detail-container">
     <div class="img-section">
@@ -66,7 +50,7 @@
         <!-- size guide section end here  -->
 
       <input type="number" value="1" min="1">
-      <button class="add-cart" style="padding: 4px; width: 100%; border-radius: 8px; font-size: 14px; cursor: pointer; position: relative; border: 0.01px gray;">Add to Cart</button>
+      <button class="add-cart" id="addToCartBtn">Add to Cart</button>
      
       <h5 style="border-bottom: 0.002px solid lightgray;">Product Details</h5>
       <p id="product-desc"></p>
@@ -85,5 +69,6 @@
     </div>
   </section>
   <script src="detail.js"></script>
+  <script src="loadHeader.js"></script>
 </body>
 </html>
