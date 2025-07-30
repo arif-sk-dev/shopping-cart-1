@@ -103,3 +103,14 @@ initCart();
 
 // Export in global scope for product.js
 window.addToCart = addToCart;
+
+// Modular activation based on current URL
+const navLinks = document.querySelectorAll(".navLink");
+const currentPage = window.location.pathname;
+
+navLinks.forEach(link => {
+  const href = link.getAttribute("href");
+  if (currentPage.endsWith(href)) {
+    link.classList.add("active");
+  }
+});

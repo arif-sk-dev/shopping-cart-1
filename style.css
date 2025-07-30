@@ -18,9 +18,16 @@ a {
   font-weight: 500;
   color: black;
 }
-a:hover {
+/* a:hover {
   color: gray;
+} */
+header a:hover,
+header a.active {
+  /* background: linear-gradient(to right, #1397c3, #00c97f); */
+  color: rgb(56, 173, 206);
+  border-radius: 4px;
 }
+
 .container {
   max-width: 900px;
   /* max-width: 90vw; */
