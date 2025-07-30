@@ -16,8 +16,15 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
       </div>
-      <p>&copy; 2025 <a href="index.html">Small Shop</a>. All rights reserved.</p>
+      <div>
+        COPYRIGHT © <span id="year"></span><a href="index.html">Small Shop</a>. All rights reserved.<br>
+        <p style="letter-spacing: 2.5px; font-size: 9px;">Developed by: <a href="https://www.linkedin.com/in/arif-713/" style="text-decoration: none;">arif</a></p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
