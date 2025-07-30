@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const closePopup = document.getElementById("closeSizeGuide");
   const overlay = document.querySelector("#popupOverlay");
 
-  // const productId = getProductIdFromURL();
-  // const addToCartBtn = document.getElementById("addToCartBtn");
-  // const quantityInput = document.querySelector("input[type='number']");
 
   openPopup.addEventListener('click', () => {
     popup.classList.add("active");
