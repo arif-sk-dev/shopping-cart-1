@@ -3,6 +3,7 @@
     "id": 1,
     "name": "LD01 Lounge Dress",
     "price": 100,
+    "category": "baby",
     "image": [
       "image/baby11.jpg",
       "image/baby21.jpg",
@@ -15,6 +16,7 @@
     "id": 2,
     "name": "LD02 Lounge Dress",
     "price": 110,
+    "category": "baby",
     "image": [
       "image/baby12.jpg",
       "image/baby20.jpg",
@@ -27,6 +29,7 @@
     "id": 3,
     "name": "LD03 Lounge Dress",
     "price": 130,
+    "category": "baby",
     "image": [
       "image/baby13.jpg",
       "image/baby21.jpg",
@@ -39,6 +42,7 @@
     "id": 4,
     "name": "LD04 Lounge Dress",
     "price": 140,
+    "category": "baby",
     "image": [
       "image/baby14.jpg",
       "image/baby21.jpg",
@@ -51,6 +55,7 @@
     "id": 5,
     "name": "LD05 Lounge Dress",
     "price": 150,
+    "category": "baby",
     "image": [
       "image/baby17.jpg",
       "image/baby21.jpg",
@@ -63,6 +68,7 @@
     "id": 6,
     "name": "LD06 Lounge Dress",
     "price": 160,
+    "category": "baby",
     "image": [
       "image/baby16.jpg",
       "image/baby21.jpg",
