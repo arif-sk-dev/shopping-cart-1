@@ -30,7 +30,7 @@ const addToCart = (product_id) => {
 
   const existing = carts.find(cart => cart.product_id == product_id);
   if (existing) {
-    alert("This product is already added in your cart!");
+    alert("This product has already been added to your cart!");
     return; // prevent quantity increment & stop further execution
     // existing.quantity++;
   } else {
