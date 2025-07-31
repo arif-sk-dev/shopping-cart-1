@@ -26,14 +26,13 @@ a {
 } */
 header a:hover,
 header a.active {
-  /* background: linear-gradient(to right, #1397c3, #00c97f); */
   color: rgb(56, 173, 206);
-  border-radius: 4px;
+  border-bottom: 3px solid green;
+  /* border-radius: 4px; */
 }
 
 .container {
   /* max-width: 1100px; */
-  /* max-width: 90vw; */
   width: 100%;
   margin: 25px auto;
   text-align: center;
@@ -64,6 +63,7 @@ header i span {
 }
 .listProduct .item img {
   width: 100%;
+  display: block;
   /* filter: drop-shadow(0 50px 20px black); */
 } 
 .listProduct {
