@@ -1,7 +1,7 @@
-// Step 1: Get the product list container
+//Get the product list container
 const listProductHTML = document.querySelector(".listProduct");
 
-// Step 2: Define a function to display products in HTML
+//Define a function to display products in HTML
 const addDataToHTML = (products) => {
   listProductHTML.innerHTML = ""; // Clear current content
 
@@ -24,7 +24,7 @@ const addDataToHTML = (products) => {
   });
 };
 
-// Step 3: Enable Add To Cart logic by delegating click event
+// Enable Add To Cart logic by delegating click event
 listProductHTML.addEventListener("click", (event) => {
   if (event.target.classList.contains("addCart")) {
     const product_id = event.target.closest(".item").dataset.id;
@@ -32,7 +32,7 @@ listProductHTML.addEventListener("click", (event) => {
   }
 });
 
-// Step 4: Initialize and load baby products only
+// Initialize and load baby products only
 const initApp = () => {
   fetch("products.json")
     .then(res => res.json())
@@ -42,5 +42,14 @@ const initApp = () => {
       addDataToHTML(babyProducts); // Load to page
     });
 };
+initApp();
 
-initApp(); // Step 5: Run the app when script loads
+// get all baby product item count
+fetch("products.json")
+  .then(res => res.json())
+  .then(data => {
+    const babyProducts = data.filter(product => product.category === "baby");
+    const babyItemCount = babyProducts.length;
+    // console.log("Total number count", babyItemCount);
+    document.getElementById("allItem").innerHTML = `All Baby Items: ${babyItemCount}`;
+  });

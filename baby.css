@@ -1,0 +1,29 @@
+/* * {
+  border: 1px solid red;
+} */
+.pageContent {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  gap: 35px;
+}
+.sidebar {
+  padding-top: 30px;
+  padding-right: 10px;
+  border-right: 0.001px solid lightgray;
+}
+.sidebar>a {
+  display: block;
+  padding: 3px 6px;
+  font-weight: 400;
+  font-size: small;
+}
+.sidebar>a:hover {
+    color: green;
+    background-color: lavender;
+  }
+
+#allItem {
+  font-size: large;
+  text-align: left;
+  margin-top: 0;
+}

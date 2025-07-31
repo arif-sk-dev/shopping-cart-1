@@ -2,7 +2,8 @@
 
 body {
   font-family: 'poppins', sans-serif;
-  margin: 0;
+  margin: auto;
+  max-width: 1100px;
 }
 
 header {
@@ -10,7 +11,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-  max-width: 900px;
+  /* max-width: 1100px; */
+  /* height: 40px; */
+  /* box-shadow: 0 0 10px gray; */
   margin: auto;
 }
 a {
@@ -29,8 +32,9 @@ header a.active {
 }
 
 .container {
-  max-width: 900px;
+  /* max-width: 1100px; */
   /* max-width: 90vw; */
+  width: 100%;
   margin: 25px auto;
   text-align: center;
   padding-top: 10px;
@@ -61,12 +65,12 @@ header i span {
 .listProduct .item img {
   width: 100%;
   /* filter: drop-shadow(0 50px 20px black); */
-}
+} 
 .listProduct {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
-  gap: 20px;
+  gap: 40px;
 }
 .listProduct .item {
   background-color: #eeeee6;
@@ -75,7 +79,7 @@ header i span {
   box-shadow: 0 0 10px gray;
 }
 .listProduct .item h3 {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
