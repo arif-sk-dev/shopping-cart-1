@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <!-- <link rel="stylesheet" href="baby.css"> -->
+  <title>about-us</title>
+
+  <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: #fdfdfd;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .contact-container {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .contact-container h1 {
+            font-size: clamp(1.4rem, calc(1.8vw + .17rem), 2rem);
+            margin-bottom: 1.5rem;
+            color: #ea4c89;
+            animation: fadeIn 0.3s ease-in;
+        }
+        .contact-container p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            animation: fadeIn 0.5s ease-in;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: auto;
+            animation: fadeIn 0.8s ease-in;
+        }
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #ea4c89;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+          background-color: #d53d76;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Got questions about a product, an order, or just want to say hello? We’d love to hear from you. Fill out the form below or email us directly at <strong>support@ourmail.com</strong>.</p>
+            
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="loadHeader.js"></script>
+  <script src="loadFooter.js"></script>
+  <!-- <script src="baby.js"></script>   -->
+</body>
+</html>
