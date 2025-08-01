@@ -44,7 +44,7 @@ const initApp = () => {
 };
 initApp();
 
-// get all baby product item count =============
+// get women product all item count =============
 fetch("products.json")
   .then(res => res.json())
   .then(data => {
@@ -62,17 +62,31 @@ fetch("products.json")
 
     const topCount = womenProducts.filter(product => product.type === "top").length;
     const bottomCount = womenProducts.filter(product => product.type === "bottom").length;
+    const shariCount = womenProducts.filter(product => product.type === "shari").length;
+    const kaftanCount = womenProducts.filter(product => product.type === "kaftan").length;
+    const gownCount = womenProducts.filter(product => product.type === "gown").length;
+    const maxiCount = womenProducts.filter(product => product.type === "maxi").length;
+    const bodyconCount = womenProducts.filter(product => product.type === "bodycon").length;
+    const scarvesCount = womenProducts.filter(product => product.type === "scarves").length;
+    const shoeCount = womenProducts.filter(product => product.type === "shoe").length;
 
       // Count 'other' women items (those not explicitly shirt or pant)
-    const otherCount = womenProducts.filter(product => product.type !== "top" && product.type !== "bottom").length;
+    const otherCount = womenProducts.filter(product => product.type !== "top" && product.type !== "bottom" && product.type !== "shari" && product.type !== "kaftan" && product.type !== "gown" && product.type !== "maxi" && product.type !== "bodycon" && product.type !== "scarves" && product.type !== "shoe").length;
 
     document.getElementById("topCount").innerHTML = `${topCount}`;
     document.getElementById("bottomCount").innerHTML = `${bottomCount}`;
+    document.getElementById("shariCount").innerHTML = `${shariCount}`;
+    document.getElementById("kaftanCount").innerHTML = `${kaftanCount}`;
+    document.getElementById("gownCount").innerHTML = `${gownCount}`;
+    document.getElementById("maxiCount").innerHTML = `${maxiCount}`;
+    document.getElementById("bodyconCount").innerHTML = `${bodyconCount}`;
+    document.getElementById("scarvesCount").innerHTML = `${scarvesCount}`;
+    document.getElementById("shoeCount").innerHTML = `${shoeCount}`;
     document.getElementById("otherCount").innerHTML = `${otherCount}`;
   });
 
 
-// sidebar link's counted product show ==============
+// sidebar link's counted product show/execute ==============
 document.querySelectorAll('.sidebar-link').forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default anchor behavior
@@ -88,7 +102,7 @@ const filterWomenProductsByType = (type) => {
     .then(data => {
       const filteredProducts = data.filter(product => 
         product.category === "women" && (
-          type === "other" ? product.type !== "top" && product.type !== "bottom" : product.type === type
+          type === "other" ? product.type !== "top" && product.type !== "bottom" && product.type !== "shari" && product.type !== "kaftan" && product.type !== "gown" && product.type !== "maxi" && product.type !== "bodycon" && product.type !== "scarves" && product.type !== "shoe" : product.type === type
         )
       );
       addDataToHTML(filteredProducts);

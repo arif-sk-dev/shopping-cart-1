@@ -1,0 +1,3 @@
+
+footer section margin will  set 2rem,
+because this margin already set in all other  page's some main container mergin.

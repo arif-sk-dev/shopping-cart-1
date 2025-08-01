@@ -300,6 +300,34 @@
       "image/baby19.jpg"
     ],
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
+  },
+  {
+    "id": 22,
+    "name": "LD22 Lounge Dress",
+    "price": 200,
+    "category": "women",
+    "type": "shoe",
+    "image": [
+      "image/baby21.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
+  },
+  {
+    "id": 22,
+    "name": "LD22 Lounge Dress",
+    "price": 200,
+    "category": "women",
+    "type": "scarves",
+    "image": [
+      "image/baby21.jpg",
+      "image/baby21.jpg",
+      "image/baby20.jpg",
+      "image/baby19.jpg"
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dignissimos!"
   }
 ]
 
