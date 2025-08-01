@@ -100,17 +100,23 @@ const initCart = () => {
 };
 
 initCart();
-
 // Export in global scope for product.js
 window.addToCart = addToCart;
 
+
 // Modular activation based on current URL
+// Handle tab clicks and toggle active class correctly
 const navLinks = document.querySelectorAll(".navLink");
-const currentPage = window.location.pathname;
+const currentPage = window.location.pathname.split("/").pop();
 
 navLinks.forEach(link => {
-  const href = link.getAttribute("href");
-  if (currentPage.endsWith(href)) {
+  const href = link.getAttribute("href").split("/").pop();
+
+  // First remove 'active' from all links
+  link.classList.remove("active");
+
+  // Then check for exact match and add active
+  if (href && currentPage === href) {
     link.classList.add("active");
   }
 });
