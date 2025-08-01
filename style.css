@@ -44,6 +44,7 @@ header a.active {
   transition: transform 0.5s;
 }
 .container2 {
+  text-align: center;
   margin: 2rem;
 }
 .pageContent {

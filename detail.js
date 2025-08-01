@@ -85,3 +85,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// similar product execution=========
+// document.addEventListener("DOMContentLoaded", () => {
+//   const productId = getProductIdFromURL();
+
+//   fetch("products.json")
+//     .then(res => res.json())
+//     .then(products => {
+//       const currentProduct = products.find(p => p.id == productId);
+//       if (!currentProduct) return;
+
+//       // Existing detail code…
+//       document.getElementById("main-img").src = Array.isArray(currentProduct.image) ? currentProduct.image[0] : currentProduct.image;
+//       document.getElementById("product-name").innerText = currentProduct.name;
+//       document.querySelector(".price").innerText = `$${currentProduct.price}`;
+//       // document.getElementById("product-desc").innerText = currentProduct.description || "No description available.";
+
+//       // Thumbnails…
+//       const thumbnails = document.querySelector(".thumbnails");
+//       thumbnails.innerHTML = "";
+//       if (Array.isArray(currentProduct.image)) {
+//         currentProduct.image.forEach(img => {
+//           const thumb = document.createElement("img");
+//           thumb.src = img;
+//           thumb.classList.add("small-img");
+//           thumb.onclick = () => {
+//             document.getElementById("main-img").src = img;
+//           };
+//           thumbnails.appendChild(thumb);
+//         });
+//       }
+
+//       // 👉 Similar Products Logic
+//       const similarProductsContainer = document.getElementById("similar-products");
+//       similarProductsContainer.innerHTML = "";
+
+//       // Optional: match by category or type if available
+//       const similarProducts = products.filter(p => p.id !== productId); 
+
+//       similarProducts.forEach(p => {
+//         const productCard = document.createElement("div");
+//         productCard.classList.add("similar-product-card");
+
+//         const img = document.createElement("img");
+//         img.src = Array.isArray(p.image) ? p.image[0] : p.image;
+//         img.alt = p.name;
+//         img.classList.add("small-img");
+//         img.onclick = () => {
+//           window.location.href = `detail.html?id=${p.id}`; // Navigate to product detail
+//         };
+
+//         const name = document.createElement("p");
+//         name.innerText = p.name;
+
+//         const price = document.createElement("p");
+//         price.innerText = `$${p.price}`;
+
+//         productCard.appendChild(img);
+//         productCard.appendChild(name);
+//         productCard.appendChild(price);
+//         similarProductsContainer.appendChild(productCard);
+//       });
+//     });
+// });

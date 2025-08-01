@@ -209,6 +209,12 @@ body {
 }
  /* product details end here =========== */
 
+ /* .similar-products-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
+  gap: 40px;
+} */
+
  @media (350px <= width <=768px) {
   #prodetails {
     display: grid;
