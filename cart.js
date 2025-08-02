@@ -123,7 +123,7 @@ navLinks.forEach(link => {
 
 
 //sidenav start here ===========
-  const openNav = document.getElementById("openNav");
+const openNav = document.getElementById("openNav");
 const closeNav = document.getElementById("closeNav");
 const sideNav = document.getElementById("mySidenav");
 const overlay2 = document.getElementById("overlay2");
@@ -144,3 +144,67 @@ overlay2.addEventListener("click", () => {
 });
 
 //SideNav end here ==========
+
+// accordion section start here ============
+// Toggle accordion panels
+document.querySelectorAll(".accordion-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const panel = button.nextElementSibling;
+    const isOpen = panel.style.maxHeight;
+
+    // Close all other panels
+    document.querySelectorAll(".accordion-panel").forEach(p => p.style.maxHeight = null);
+
+    // Toggle current panel
+    panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+  });
+});
+
+// Render accordion links dynamically using your existing logic
+const loadAccordionLinks = () => {
+  fetch("products.json")
+    .then(res => res.json())
+    .then(data => {
+      const categories = ["baby", "women", "men"];
+
+      categories.forEach(category => {
+        const panel = document.getElementById(`${category}Panel`);
+        const types = Array.from(new Set(data
+          .filter(p => p.category === category)
+          .map(p => p.type)));
+
+        types.forEach(type => {
+          const link = document.createElement("a");
+          link.href = "#";
+          link.dataset.category = category;
+          link.dataset.type = type;
+          link.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+          link.addEventListener("click", e => {
+            e.preventDefault();
+            filterProducts(category, type);
+          });
+          panel.appendChild(link);
+        });
+      });
+    });
+};
+
+// Filter products from accordion clicks
+const filterProducts = (category, type) => {
+  fetch("products.json")
+    .then(res => res.json())
+    .then(data => {
+      const filtered = data.filter(product =>
+        product.category === category && (
+          type === "other"
+            ? !["shirt", "pant", "tshirt", "bodysuits", "leggings", "joggers", "frocks", "scarves", "pajama", "shoe"].includes(product.type)
+            : product.type === type
+        )
+      );
+      addDataToHTML(filtered);
+    });
+};
+
+loadAccordionLinks();
+
+// accordion section end here =============

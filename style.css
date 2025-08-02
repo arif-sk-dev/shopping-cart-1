@@ -13,6 +13,7 @@ body {
 .menubar {
   display: none;
 }
+
 .headerShadow {
   box-shadow: 0 0 10px lightgray;
   display: grid;
@@ -28,18 +29,17 @@ header {
 }
 a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   color: black;
 }
 
 header a:hover,
 header a.active {
-  color: green;
-  border-bottom: 2px solid green;
+  color: teal;
+  border-bottom: 2px solid teal;
 }
 
 .container {
-  /* width: 100%; */
   margin: 2rem;
   text-align: center;
   padding: 10px;
@@ -58,6 +58,10 @@ header a.active {
 .ri-shopping-cart-2-line {
   position: relative;
   cursor: pointer;
+  font-weight: bold;
+}
+.ri-shopping-cart-2-line:hover {
+  color: teal;
 }
 .ri-shopping-cart-2-line span {
   font-size: 13px;
@@ -73,6 +77,9 @@ header a.active {
   left: 10px;
   color: white;
 }
+.ri-shopping-cart-2-line span:hover {
+  background-color: teal;
+}
 .listProduct .item img {
   width: 100%;
   display: block;
@@ -80,7 +87,6 @@ header a.active {
 } 
 .listProduct {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
   gap: 40px;
 }
@@ -230,6 +236,10 @@ header a.active {
 .menubar {
   font-size: 22px;
   cursor: pointer;
+  font-weight: bold;
+}
+.menubar:hover {
+  color: teal;
 }
 
 #mySidenav {
@@ -243,11 +253,11 @@ header a.active {
   background: #252525;
   overflow-x: hidden;
   transition: 0.4s ease;
-  padding: 10px;
+  padding: 40px 10px 10px;
   z-index: 1100;
   color: white;
   font-size: 14px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 #mySidenav.active {
   left: 0;
@@ -256,19 +266,83 @@ header a.active {
 .sidenav > a {
   color: white;
   display: block;
-  padding: 5px;
+  padding: 10px;
 }
 .sidenav > a:hover {
   background-color: turquoise;
   color: black;
 }
 .close-sidenav {
-  font-size: large;
+  font-size: 20px;
+  font-weight: 500;
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: 13px;
+  right: 13px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.close-sidenav:hover {
+  color: red;
 }
 
+/* accordion section start here ============= */
+.category-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+.category-accordion a {
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 0.001px solid #454444;
+}
+.category-accordion a:hover {
+  background-color: teal;
+}
+
+.accordion-toggle {
+  background: inherit;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: background 0.3s ease;
+  border-bottom: 0.001px solid #454444;
+}
+
+.accordion-toggle:hover {
+  background-color: teal;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #333;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-panel a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  border-bottom: 0.1px solid #252525;
+}
+
+.accordion-panel a:hover {
+  color: white;
+}
+
+/* accordion section end here ============== */
 
 @media (350px <= width <=968px) {
   .menubar {
@@ -282,17 +356,28 @@ header a.active {
   header {
     display: none;
   }
-  /* .sidenav {
-    display: block;
-  } */
+ 
 
 
 
 
 
-
+ /* main content mobile view */
   .listProduct {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0;
+  }
+   .sidebar {
+    display: none;
+  }
+  .pageContent {
+    margin: 0;
+  }
+  .pageContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
 }
