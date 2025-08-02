@@ -147,16 +147,33 @@ overlay2.addEventListener("click", () => {
 
 // accordion section start here ============
 // Toggle accordion panels
+// document.querySelectorAll(".accordion-toggle").forEach(button => {
+//   button.addEventListener("click", () => {
+//     const panel = button.nextElementSibling;
+//     const isOpen = panel.style.maxHeight;
+
+//     // Close all other panels
+//     document.querySelectorAll(".accordion-panel").forEach(p => p.style.maxHeight = null);
+
+//     // Toggle current panel
+//     panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+//   });
+// });
+
 document.querySelectorAll(".accordion-toggle").forEach(button => {
   button.addEventListener("click", () => {
     const panel = button.nextElementSibling;
     const isOpen = panel.style.maxHeight;
 
-    // Close all other panels
+    // Close all other panels and remove 'active' class
     document.querySelectorAll(".accordion-panel").forEach(p => p.style.maxHeight = null);
+    document.querySelectorAll(".accordion-toggle").forEach(btn => btn.classList.remove("active"));
 
     // Toggle current panel
-    panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+    if (!isOpen) {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      button.classList.add("active");
+    }
   });
 });
 

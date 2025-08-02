@@ -43,3 +43,6 @@
   text-align: left;
   margin-top: 0;
 }
+
+@media (350px <= width <=968px) {
+}
