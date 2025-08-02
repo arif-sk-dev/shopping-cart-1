@@ -212,7 +212,7 @@ header a.active {
   background-color: transparent;
 }
 .listCart .item:nth-child(even) {
-  background-color: lavender;
+  background-color: rgb(203, 245, 245);
 }
 .listCart {
   overflow: auto;

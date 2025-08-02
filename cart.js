@@ -224,4 +224,4 @@ const filterProducts = (category, type) => {
 
 loadAccordionLinks();
 
-// accordion section end here =============
+// accordion section end here ============= 
