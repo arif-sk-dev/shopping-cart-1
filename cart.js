@@ -120,3 +120,27 @@ navLinks.forEach(link => {
     link.classList.add("active");
   }
 });
+
+
+//sidenav start here ===========
+  const openNav = document.getElementById("openNav");
+const closeNav = document.getElementById("closeNav");
+const sideNav = document.getElementById("mySidenav");
+const overlay2 = document.getElementById("overlay2");
+
+openNav.addEventListener("click", () => {
+  sideNav.classList.add("active");
+  overlay2.classList.add("active");
+});
+
+closeNav.addEventListener("click", () => {
+  sideNav.classList.remove("active");
+  overlay2.classList.remove("active");
+});
+
+overlay2.addEventListener("click", () => {
+  sideNav.classList.remove("active");
+  overlay2.classList.remove("active");
+});
+
+//SideNav end here ==========
